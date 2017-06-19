@@ -1,19 +1,22 @@
 <md-card>
   <md-card-content>
     <form>
-      <md-input-container>
+      <md-input-container class="full-width">
         <input #newName mdInput placeholder="Name">
       </md-input-container>
-      <md-input-container>
+      <md-input-container class="full-width">
         <input #newAge mdInput placeholder="Age">
       </md-input-container>
-      <md-input-container>
+      <md-input-container class="full-width">
+        <input #newSex mdInput placeholder="Sex">
+      </md-input-container>
+      <md-input-container class="full-width">
         <input #newDescription mdInput placeholder="Description">
       </md-input-container>
-      <md-input-container>
+      <md-input-container class="full-width">
         <input #newImage mdInput placeholder="Image URL">
       </md-input-container>
-      <button (click)="submitForm(newName.value, newAge.value, newDescription.value, newImage.value); newName.value=''; newAge.value=''; newDescription.value=''; newImage.value=''" md-button>ADD NEW CAT</button>
+      <button (click)="submitForm(newName.value, newAge.value, newSex.value, newDescription.value, newImage.value); newName.value=''; newAge.value=''; newSex.value=''; newDescription.value=''; newImage.value=''" md-button color="accent" class="full-width">ADD NEW CAT</button>
     </form>
   </md-card-content>
 </md-card>

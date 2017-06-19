@@ -1,3 +1,9 @@
-<p>
-  cat-detail works!
-</p>
+<md-card>
+ <img md-card-image src="{{(catToDisplay | async)?.image}}">
+  <md-card-content>
+    <md-card-title>{{(catToDisplay | async)?.name}}</md-card-title>
+    <p>Age: {{(catToDisplay | async)?.age}}</p>
+    <p>Sex: {{(catToDisplay | async)?.sex}}</p>
+    <p>Description: {{(catToDisplay | async)?.description}}</p>
+  </md-card-content>
+</md-card>

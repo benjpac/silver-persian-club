@@ -15,6 +15,7 @@ import { CatListComponent } from './cat-list/cat-list.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { CatDetailComponent } from './cat-detail/cat-detail.component';
+import { EditCatComponent } from './edit-cat/edit-cat.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     CatListComponent,
     AboutComponent,
     AdminComponent,
-    CatDetailComponent
+    CatDetailComponent,
+    EditCatComponent
   ],
   imports: [
     BrowserModule,

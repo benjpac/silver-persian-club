@@ -15,8 +15,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(name: string, age: number, description: string, image: string) {
-    const newCat: Cat = new Cat(name, age, description, image);
+  submitForm(name: string, age: number, sex: string, description: string, image: string) {
+    const newCat: Cat = new Cat(name, age, sex, description, image);
     this.catService.addCat(newCat);
   }
 
