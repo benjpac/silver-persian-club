@@ -1,24 +1,28 @@
+import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
+import { CatService } from './../shared/cat.service';
+import { Cat } from './../shared/cat.model';
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-cat-list',
   templateUrl: './cat-list.component.html',
-  styleUrls: ['./cat-list.component.css']
+  styleUrls: ['./cat-list.component.css'],
+  providers: [CatService]
 })
 export class CatListComponent implements OnInit {
 
-  myData: Array<any>;
+  cats: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
+
+  constructor(private router: Router, private catService: CatService) { }
 
   ngOnInit() {
+    this.cats = this.catService.getCats();
   }
 
-  constructor(private http: Http) {
-
-    this.http.get('https://jsonplaceholder.typicode.com/photos')
-      .map(response => response.json())
-      .subscribe(res => this.myData = res);
-
+  goToDetailPage(clickedCat) {
+    this.router.navigate(['cats', clickedCat.$key]);
   }
 
 }

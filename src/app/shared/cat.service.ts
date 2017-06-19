@@ -23,16 +23,15 @@ export class CatService {
   }
 
   updateCat(localUpdatedCat){
-    var catEntryInFirebase = this.getCatById(localUpdatedCat.$key);
+    const catEntryInFirebase = this.getCatById(localUpdatedCat.$key);
     catEntryInFirebase.update({name: localUpdatedCat.name,
                                 age: localUpdatedCat.age,
-                                likes: localUpdatedCat.likes,
-                                dislikes: localUpdatedCat.dislikes,
+                                description: localUpdatedCat.description,
                                 image: localUpdatedCat.image});
   }
 
   deleteCat(localDeletedCat) {
-    var catEntryInFirebase = this.getCatById(localDeletedCat.$key);
+    const catEntryInFirebase = this.getCatById(localDeletedCat.$key);
     catEntryInFirebase.remove();
   }
 

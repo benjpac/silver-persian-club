@@ -1,0 +1,21 @@
+<md-card>
+  <md-card-content>
+    <form>
+      <md-input-container>
+        <input #newName mdInput placeholder="Name">
+      </md-input-container>
+      <md-input-container>
+        <input #newAge mdInput placeholder="Age">
+      </md-input-container>
+      <md-input-container>
+        <input #newDescription mdInput placeholder="Description">
+      </md-input-container>
+      <md-input-container>
+        <input #newImage mdInput placeholder="Image URL">
+      </md-input-container>
+      <button (click)="submitForm(newName.value, newAge.value, newDescription.value, newImage.value); newName.value=''; newAge.value=''; newDescription.value=''; newImage.value=''" md-button>ADD NEW CAT</button>
+    </form>
+  </md-card-content>
+</md-card>
+
+<app-cat-list></app-cat-list>
