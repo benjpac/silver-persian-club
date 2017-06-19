@@ -7,14 +7,18 @@
 </md-toolbar>
 
 <md-menu #appMenu="mdMenu">
-  <button md-menu-item>
+  <a routerLink="" md-menu-item>
+    <md-icon>store</md-icon> 
+    <span>Home</span>
+  </a>
+  <a routerLink="about" md-menu-item>
     <md-icon>info_outline</md-icon> 
-    <a routerLink="about">About</a>
-  </button>
-  <button md-menu-item>
+    <span>About</span>
+  </a>
+  <a routerLink="admin" md-menu-item>
     <md-icon>perm_identity</md-icon>
     <span>Admin</span>
-  </button>
+  </a>
 </md-menu>
 
 <router-outlet></router-outlet>
