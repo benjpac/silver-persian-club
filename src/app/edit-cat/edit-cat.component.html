@@ -13,6 +13,6 @@
 <md-input-container>
   <input [(ngModel)]="selectedCat.image">
 </md-input-container>
-<button (click)="beginUpdatingCat(selectedCat)">Update</button>
+<button (click)="beginUpdatingCat(selectedCat)" md-raised-button color="accent">Update</button>
 <hr>
-<button (click)="beginDeletingCat(selectedCat)">Delete</button>
+<button (click)="beginDeletingCat(selectedCat)" md-raised-button color="warn">Delete</button>

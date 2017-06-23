@@ -1,16 +1,25 @@
-<md-card>
+<!--<md-card>
   <md-card-content class="center-align">
     <h1>Welcome to the Washington State Silver Persian Club!</h1>
-    <img src="../assets/img/0catrunm.gif" alt="">
   </md-card-content>
-</md-card>
+</md-card>-->
+<app-about></app-about>
+<br>
+<md-card>
+  <h1 class="center-align">The Cats!</h1>
 
-<div *ngFor="let cat of cats | async">
+<!--<div *ngFor="let cat of cats | async">
   <md-card (click)="goToDetailPage(cat)" class="half-width">
     <img md-card-image src="{{cat.image}}">
     <md-card-title>{{cat.name}}</md-card-title>
-    <div *ngIf="currentRoute === '/admin'">
-      <app-edit-cat [selectedCat]="cat"></app-edit-cat>
-    </div>
+    <app-edit-cat *ngIf="currentRoute === '/admin'" [selectedCat]="cat"></app-edit-cat>
   </md-card>
-</div>
+</div>-->
+
+  <md-grid-list cols="2" rowHeight="25em">
+    <md-grid-tile *ngFor="let cat of cats | async" (click)="goToDetailPage(cat)">
+        <img md-card-image src="{{cat.image}}">
+        <!--<md-card-title>{{cat.name}}</md-card-title>-->
+    </md-grid-tile>
+  </md-grid-list>
+</md-card>

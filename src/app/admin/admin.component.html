@@ -16,9 +16,9 @@
       <md-input-container class="full-width">
         <input #newImage mdInput placeholder="Image URL">
       </md-input-container>
-      <button (click)="submitForm(newName.value, newAge.value, newSex.value, newDescription.value, newImage.value); newName.value=''; newAge.value=''; newSex.value=''; newDescription.value=''; newImage.value=''" md-button color="accent" class="full-width">ADD NEW CAT</button>
+      <button (click)="submitForm(newName.value, newAge.value, newSex.value, newDescription.value, newImage.value); newName.value=''; newAge.value=''; newSex.value=''; newDescription.value=''; newImage.value=''" md-raised-button color="accent" class="full-width">Add New Cat</button>
     </form>
   </md-card-content>
 </md-card>
-
+<br>
 <app-cat-list></app-cat-list>

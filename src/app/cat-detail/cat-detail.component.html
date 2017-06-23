@@ -7,3 +7,4 @@
     <p>Description: {{(catToDisplay | async)?.description}}</p>
   </md-card-content>
 </md-card>
+<app-edit-cat *ngIf="currentRoute === '/admin'" [selectedCat]="cat"></app-edit-cat>

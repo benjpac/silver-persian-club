@@ -19,6 +19,16 @@ a {
   width: 100%;
 }
 
+.card-height {
+  height: 30em;
+}
+
 .half-width {
-  width: 40%;
+  width: 45%;
+  float: left;
+  /*display: flex;*/
+}
+
+.lighter-grey {
+  background: lightblue;
 }

@@ -11,14 +11,15 @@
     <md-icon>store</md-icon> 
     <span>Home</span>
   </a>
-  <a routerLink="about" md-menu-item>
+  <!--<a routerLink="about" md-menu-item>
     <md-icon>info_outline</md-icon> 
     <span>About</span>
-  </a>
+  </a>-->
   <a routerLink="admin" md-menu-item>
     <md-icon>perm_identity</md-icon>
     <span>Admin</span>
   </a>
 </md-menu>
-
-<router-outlet></router-outlet>
+<md-card class="lighter-grey">
+  <router-outlet></router-outlet>
+</md-card>
