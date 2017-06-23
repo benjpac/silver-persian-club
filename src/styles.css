@@ -11,6 +11,13 @@ a {
   color: rgba(0,0,0,.87);
 }
 
+.img {
+  height: 18em;
+  width: 30em;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .center-align {
   text-align: center;
 }

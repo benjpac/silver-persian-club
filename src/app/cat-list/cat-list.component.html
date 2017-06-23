@@ -15,11 +15,27 @@
     <app-edit-cat *ngIf="currentRoute === '/admin'" [selectedCat]="cat"></app-edit-cat>
   </md-card>
 </div>-->
+  <div *ngIf="currentRoute == '/admin'; else normalList">
+    <md-grid-list cols="2" rowHeight="25em">
+      <md-grid-tile *ngFor="let cat of cats | async">
+        <div class="img">
+          <img md-card-image src="{{cat.image}}">
+        </div>
+          <!--<md-card-title>{{cat.name}}</md-card-title>-->
+          <app-edit-cat [selectedCat]="cat"></app-edit-cat>
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+  <ng-template #normalList>
+    <md-grid-list cols="2" rowHeight="25em">
+      <md-grid-tile *ngFor="let cat of cats | async" (click)="goToDetailPage(cat)">
+        <div class="img">
+          <img md-card-image src="{{cat.image}}">
+        </div>
+          
+          <!--<md-card-title>{{cat.name}}</md-card-title>-->
+      </md-grid-tile>
+    </md-grid-list>
+  </ng-template>
 
-  <md-grid-list cols="2" rowHeight="25em">
-    <md-grid-tile *ngFor="let cat of cats | async" (click)="goToDetailPage(cat)">
-        <img md-card-image src="{{cat.image}}">
-        <!--<md-card-title>{{cat.name}}</md-card-title>-->
-    </md-grid-tile>
-  </md-grid-list>
 </md-card>

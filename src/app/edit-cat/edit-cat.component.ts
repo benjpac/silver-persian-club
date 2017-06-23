@@ -17,11 +17,12 @@ export class EditCatComponent implements OnInit {
   }
 
   beginUpdatingCat(catToUpdate) {
+    alert('Edit saved')
     this.catService.updateCat(catToUpdate);
   }
 
   beginDeletingCat(catToDelete) {
-    if(confirm('Are you sure you want to delete this cat?')) {
+    if (confirm('Are you sure you want to delete this cat?')) {
       this.catService.deleteCat(catToDelete);
     }
   }
