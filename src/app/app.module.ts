@@ -1,3 +1,4 @@
+import { AgePipe } from './shared/age.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,7 +9,8 @@ import { masterFirebaseConfig } from './shared/api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule, MdGridListModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule } from '@angular/material';
+import { MdGridListModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { CatListComponent } from './cat-list/cat-list.component';
@@ -31,7 +33,8 @@ export const firebaseConfig = {
     AboutComponent,
     AdminComponent,
     CatDetailComponent,
-    EditCatComponent
+    EditCatComponent,
+    AgePipe
   ],
   imports: [
     BrowserModule,

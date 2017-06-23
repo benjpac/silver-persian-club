@@ -17,7 +17,7 @@
 </div>-->
   <div *ngIf="currentRoute == '/admin'; else normalList">
     <md-grid-list cols="2" rowHeight="25em">
-      <md-grid-tile *ngFor="let cat of cats | async">
+      <md-grid-tile *ngFor="let cat of cats | async | age">
         <div class="img">
           <img md-card-image src="{{cat.image}}">
         </div>
@@ -28,7 +28,7 @@
   </div>
   <ng-template #normalList>
     <md-grid-list cols="2" rowHeight="25em">
-      <md-grid-tile *ngFor="let cat of cats | async" (click)="goToDetailPage(cat)">
+      <md-grid-tile *ngFor="let cat of cats | async | age" (click)="goToDetailPage(cat)">
         <div class="img">
           <img md-card-image src="{{cat.image}}">
         </div>
